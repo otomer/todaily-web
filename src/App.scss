@@ -4,7 +4,7 @@ $bg-color: #22292b;
 $line-color: linear-gradient(to right, #88d1e0 0%, #0de599 100%);
 $line-height: 4px;
 $text-color: #fff;
-$text-size: 4em;
+$text-size: 4.3em;
 $sub-text-color: #fff;
 
 @keyframes onLoad {
@@ -28,21 +28,21 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: 85vh;
 
   .container {
-    height: 64px;
+    height: 77px;
     position: relative;
 
     .name {
       margin-bottom: 10px;
       position: relative;
-      height: 64px;
+      height: 77px;
       overflow: hidden;
 
       @keyframes loadName {
         from {
-          transform: translateY(64px);
+          transform: translateY(77px);
         }
         to {
           transform: translateY(0px);
@@ -53,7 +53,7 @@ body {
         display: inline-block;
         font-size: $text-size;
         color: $text-color;
-        transform: translateY(64px);
+        transform: translateY(77px);
 
         &:nth-child(1) {
           animation: loadName 0.5s ease 1s forwards;
@@ -113,7 +113,112 @@ body {
         color: $sub-text-color;
         letter-spacing: 4px;
         animation: fadeSubIn 1s ease 2.4s forwards;
+
+        a {
+          font-family: 'Raleway', sans-serif;
+          color: white;
+          font-size: 15px;
+          line-height: 20px;
+        }
+
+        &.description {
+          margin-top: 40px;
+        }
       }
     }
+  }
+}
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+footer {
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: 0 auto;
+  position: fixed;
+  height: auto;
+  width: 100%;
+
+  text-align: center;
+}
+
+footer a,
+footer label {
+  color: white;
+}
+footer .content {
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  height: 80px;
+}
+footer .content .bottom {
+  padding: 0;
+  margin: 0;
+  top: 10%;
+}
+footer .content .bottom .beat {
+  color: red;
+  -webkit-animation: beat 0.3s infinite alternate;
+  animation: beat 0.3s infinite alternate;
+  padding: 0 5px;
+}
+footer .content .top {
+  font-size: 25px;
+}
+footer .content .top .fa-twitter:hover {
+  transition: 350ms ease-in-out;
+  color: #55acee;
+  -webkit-transform: scale(1.4);
+  transform: scale(1.4);
+}
+footer .content .top .fa-chrome:hover {
+  transition: 350ms ease-in-out;
+  color: #f4b400;
+  -webkit-transform: scale(1.4);
+  transform: scale(1.4);
+}
+footer .content .top .fa-instagram:hover {
+  transition: 350ms ease-in-out;
+  color: #e4405f;
+  -webkit-transform: scale(1.4);
+  transform: scale(1.4);
+}
+footer .content .top .fa-github:hover {
+  transition: 350ms ease-in-out;
+  color: white;
+  -webkit-transform: scale(1.4);
+  transform: scale(1.4);
+}
+footer .content .top a {
+  padding: 10px;
+  color: #88d1e0;
+}
+footer .content .top i {
+  transition: 500ms ease-in-out;
+}
+
+@-webkit-keyframes beat {
+  to {
+    -webkit-transform: scale(1.4);
+    transform: scale(1.4);
+  }
+}
+
+@keyframes beat {
+  to {
+    -webkit-transform: scale(1.4);
+    transform: scale(1.4);
   }
 }
