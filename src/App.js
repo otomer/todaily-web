@@ -23,7 +23,12 @@ class App extends Component {
               <p className="description">
                 Enjoy the{' '}
                 <a href="https://chrome.google.com/webstore/detail/todaily/aidlimhbkbbifgjlihhhakplpgfoljmh">
-                  <img alt="" width="19" height="19" src="./chrome.png" />
+                  <img
+                    alt=""
+                    width="19"
+                    height="19"
+                    src="./images/chrome.png"
+                  />
                 </a>{' '}
                 Extension :)
               </p>
